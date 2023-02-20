@@ -135,17 +135,17 @@ function App() {
         </div> :
         <div className='explication'>
           <h3 className='close' onClick={() => { setShowProject(true) }}>Fermer</h3>
-          <h1>Bienvenue sur mon projet distributeur de Snacks</h1>
+          <h2>Bienvenue sur mon projet distributeur de Snacks</h2>
           <br />
           <div>
-            <h2>Technologies utilisées</h2>
+            <h3>Technologies utilisées</h3>
             <nav>
               <li>React JS</li>
               <li>Json</li>
             </nav>
           </div>
           <br />
-          <p style={{ textAlign: 'left', fontWeight:'200' }}>C'est un distributeur automatique, il y 3 categories de produit: les biscuits/gateaux, les boissons, et les chips. Chaque produit posséde un code.<br /><br />
+          <p style={{ textAlign: 'left', fontWeight: '200' }}>C'est un distributeur automatique, il y 3 categories de produit: les biscuits/gateaux, les boissons, et les chips. Chaque produit posséde un code.<br /><br />
             On peut soit ajouter un produit au panier en le sélectionnant directement depuis l'interface, soit l'ajouter en tapant le code produit sur le clavier.
             Une fois une suite de 4 nombres entrée, on vérifie qu'un produit possède bien ce code. Si c'est le cas on propose à l'acheteur de l'ajouter au panier
             Sinon on réinitialise la selection.<br /><br /> A noté qu'on peut sélectionner plusieurs fois le même produit, il y a en haut à droite de chaque produit une pastille qui indique le nombre selectionné de chaque produit
@@ -153,7 +153,7 @@ function App() {
             puis ensuit le panier est reinitialisé.</p>
           <br />
           <div className='liens'>
-            <h2>Mes liens</h2>
+            <h3>Mes liens</h3>
             <nav>
               <li><a href='https://github.com/Djibril-Samassa?tab=repositories' target="_blank">Github</a></li>
               <li><a href='https://www.linkedin.com/in/djibril-samassa/' target="_blank">Linkedin</a></li>
