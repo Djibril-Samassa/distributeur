@@ -1,0 +1,76 @@
+{
+    "machine": [
+        {
+            "name": "Kinder",
+            "id": "1210",
+            "price": 2,
+            "stock": 1
+        },
+        {
+            "name": "Snickers",
+            "id": "1211",
+            "price": 2,
+            "stock": 3
+        },
+        {
+            "name": "Lu",
+            "id": "1212",
+            "price": 1,
+            "stock": 7
+        },
+        {
+            "name": "Gauffre",
+            "id": "1213",
+            "price": 1,
+            "stock": 2
+        },
+        {
+            "name": "Coca",
+            "id": "1310",
+            "price": 3,
+            "stock": 15
+        },
+        {
+            "name": "Orangina",
+            "id": "1311",
+            "price": 3,
+            "stock": 7
+        },
+        {
+            "name": "Oasis",
+            "id": "1312",
+            "price": 2,
+            "stock": 4
+        },
+        {
+            "name": "Cristaline",
+            "id": "1313",
+            "price": 1,
+            "stock": 6
+        },
+        {
+            "name": "LaysBarbecue",
+            "id": "1410",
+            "price": 2,
+            "stock": 5
+        },
+        {
+            "name": "LaysNature",
+            "id": "1411",
+            "price": 1,
+            "stock": 7
+        },
+        {
+            "name": "DoritosCheddar",
+            "id": "1412",
+            "price": 2,
+            "stock": 3
+        },
+        {
+            "name": "PringlesSourCream",
+            "id": "1413",
+            "price": 3,
+            "stock": 0
+        }
+    ]
+}
