@@ -95,8 +95,8 @@ function App() {
                 {article.machine.map((art, i) => (
                   <div className={paying && counter[art.name] ? 'payment' : 'article'} onClick={() => { addToCart(art.price), updateCounter(art.name) }}>
                     <img className='artimg' src={`/photos/${art.name}.png`} alt='non trouvé' key={art.id} />
-                    <h3>{art.name}</h3>
-                    <h3 className='price'>{art.price} €</h3>
+                    <p>{art.name}</p>
+                    <p className='price'>{art.price} €</p>
                     <p>Code produit : {art.id}</p>
                     {counter[art.name] !== 0 && !paying ? <span className='articleNumber'>{
                       counter[art.name]
@@ -107,7 +107,7 @@ function App() {
                 <div className='screen' >
                   <h3>{cart} €</h3>
                 </div>
-                <h3 onClick={() => { clearCart(), clearCounter(), clearProductId() }} className='clearButton'>Annuler  </h3>
+                <p onClick={() => { clearCart(), clearCounter(), clearProductId() }} className='clearButton'>Annuler  </p>
                 <div className='bottom'>
                   <div className='displayer'>
                     <h3>{productId.length !== 0 ? productId.join('') : 'Code'}</h3>
@@ -126,7 +126,7 @@ function App() {
                   </div>
                   <span>{productDoesExist !== null ? productDoesExist ? <span className='add' onClick={() => { addFromId(productId) }}>ajouter</span> : <span>N'existe pas <br /> Réinitialisation </span> : null}</span>
                 </div>
-                {cart !== 0 ? <h3 onClick={() => { pay() }} className='pay'> Payer </h3> : null}
+                {cart !== 0 ? <p onClick={() => { pay() }} className='pay'> Payer </p> : null}
                 <h3>{paying ? 'Distribution en cours' : null}</h3>
               </div>
             </div>
