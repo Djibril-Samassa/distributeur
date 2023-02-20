@@ -26,6 +26,8 @@ function App() {
   const [productDoesExist, setProductDoesExist] = useState(null)
   const [paying, setPaying] = useState(null)
   const [showProject, setShowProject] = useState(false)
+  const [promotion, setPromotion] = useState('')
+  const [message, setMessage] = useState(null)
 
   useEffect(() => {
     productId.length === 4 ? checkId(productId) : null
@@ -44,6 +46,8 @@ function App() {
   }
 
   const clearCart = () => {
+    setMessage(null)
+    setPromotion('')
     setCart(0)
   }
 
@@ -82,6 +86,10 @@ function App() {
     }, [2000])
   }
 
+  const checkCodePromo = (code) => {
+    code === 'DJIBRILS20' && cart >= 20 ? setMessage('Promotion appliquée') : code === 'DJIBRILS20' && cart < 20 ? setMessage('Minimum non atteint') : setMessage("ce code n'existe pas")
+  }
+
   return (
     <div className="App">
       {showProject ?
@@ -105,7 +113,10 @@ function App() {
               </div>
               <div className='right'>
                 <div className='screen' >
-                  <h3>{cart} €</h3>
+                  {message === 'Promotion appliquée' ?
+                    <><h3 className='old'>{cart} €</h3><h3>{cart - 5} €</h3></>
+                    :
+                    <h3>{cart} €</h3>}
                 </div>
                 <p onClick={() => { clearCart(), clearCounter(), clearProductId() }} className='clearButton'>Annuler  </p>
                 <div className='bottom'>
@@ -126,7 +137,14 @@ function App() {
                   </div>
                   <span>{productDoesExist !== null ? productDoesExist ? <span className='add' onClick={() => { addFromId(productId) }}>ajouter</span> : <span>N'existe pas <br /> Réinitialisation </span> : null}</span>
                 </div>
-                {cart !== 0 ? <p onClick={() => { pay() }} className='pay'> Payer </p> : null}
+                {cart !== 0 ? <input className='promo' value={promotion} onChange={(e) => { setPromotion(e.target.value) }} placeholder='Votre code promo' /> : null}
+                {promotion !== '' ? <p className='pay' onClick={(() => { checkCodePromo(promotion) })}>Appliquer promo</p> : null}
+                {message !== null ? <p style={{ marginTop: '10px' }}>{message}</p> : null}
+                {cart !== 0 ? <p onClick={() => {
+                  pay(),
+                    setMessage(null),
+                    setPromotion('')
+                }} className='pay'> Payer </p> : null}
                 <h3>{paying ? 'Distribution en cours' : null}</h3>
               </div>
             </div>
@@ -157,6 +175,7 @@ function App() {
             <nav>
               <li><a href='https://github.com/Djibril-Samassa?tab=repositories' target="_blank">Github</a></li>
               <li><a href='https://www.linkedin.com/in/djibril-samassa/' target="_blank">Linkedin</a></li>
+              <li><a href='https://djibrilsamassa.netlify.app/' target="_blank">Mon portfolio</a></li>
             </nav>
           </div>
         </div>}

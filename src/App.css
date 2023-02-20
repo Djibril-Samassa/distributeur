@@ -224,6 +224,7 @@
   30% {
     transform: translateY(1vh);
   }
+
   40% {
     transform: translateY(0vh);
   }
@@ -239,6 +240,7 @@
   70% {
     transform: translateY(1vh);
   }
+
   80% {
     transform: translateY(0vh);
   }
@@ -246,6 +248,7 @@
   90% {
     transform: translateY(1vh);
   }
+
   100% {
     transform: translateY(0vh);
   }
@@ -309,6 +312,18 @@
   text-decoration: none;
 }
 
-li{
+li {
   font-size: 1em;
+}
+
+.promo {
+  padding: 5px 15px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.old {
+  color: red;
+  text-decoration: line-through;
+  line-height: 5px;
 }
