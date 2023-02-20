@@ -88,8 +88,8 @@ function App() {
         <div className='Black'>
 
           <div className='machine'>
-            <h1>Distributeur automatique de Snacks Par Djibril Samassa</h1>
-            <h3 className='open' onClick={() => { setShowProject(false) }}>Lire la fiche du projet</h3>
+            <h3>Distributeur automatique de Snacks Par Djibril Samassa</h3>
+            <p className='open' onClick={() => { setShowProject(false) }}>Lire la fiche du projet</p>
             <div className='container'>
               <div className='vitre'>
                 {article.machine.map((art, i) => (
@@ -145,12 +145,12 @@ function App() {
             </nav>
           </div>
           <br />
-          <h2 style={{ textAlign: 'left', fontWeight:'200' }}>C'est un distributeur automatique, il y 3 categories de produit: les biscuits/gateaux, les boissons, et les chips. Chaque produit posséde un code.<br /><br />
+          <p style={{ textAlign: 'left', fontWeight:'200' }}>C'est un distributeur automatique, il y 3 categories de produit: les biscuits/gateaux, les boissons, et les chips. Chaque produit posséde un code.<br /><br />
             On peut soit ajouter un produit au panier en le sélectionnant directement depuis l'interface, soit l'ajouter en tapant le code produit sur le clavier.
             Une fois une suite de 4 nombres entrée, on vérifie qu'un produit possède bien ce code. Si c'est le cas on propose à l'acheteur de l'ajouter au panier
             Sinon on réinitialise la selection.<br /><br /> A noté qu'on peut sélectionner plusieurs fois le même produit, il y a en haut à droite de chaque produit une pastille qui indique le nombre selectionné de chaque produit
             .<br /><br />Dès lors qu'il y a plus d'un produit dans le panier, on propose à l'acheteur de payer, lorsqu'il paye on lui distribue ce qu'il a commandé
-            puis ensuit le panier est reinitialisé.</h2>
+            puis ensuit le panier est reinitialisé.</p>
           <br />
           <div className='liens'>
             <h2>Mes liens</h2>
